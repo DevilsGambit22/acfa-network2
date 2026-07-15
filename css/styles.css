@@ -68,3 +68,225 @@ main{padding-top:14px}.page{display:none;animation:pageIn .35s ease}.page.active
 @keyframes spin{to{transform:rotate(360deg)}}@keyframes spinX{from{transform:rotateX(62deg) rotate(0)}to{transform:rotateX(62deg) rotate(360deg)}}@keyframes tiltSpin{to{transform:rotate(382deg)}}@keyframes pulse{0%,100%{transform:scale(.94);opacity:.35}50%{transform:scale(1.08);opacity:.8}}@keyframes pageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @media(max-width:900px){.hero-panel{grid-template-columns:1fr;text-align:center}.hero-actions{justify-content:center}.club-grid,.download-layout,.mission-panel,.beta-notice{grid-template-columns:1fr}.social-grid{grid-template-columns:1fr}.social-card p{min-height:auto}.assistant-hero{grid-template-columns:1fr;text-align:center}.assistant-logo-stage{margin:auto}}
 @media(max-width:650px){.site-shell{width:min(100% - 12px,1220px);margin:6px auto}.topbar{align-items:flex-start;flex-direction:column}.topbar nav{width:100%}.nav-button{flex:1}.hero-panel{padding:30px 17px}.logo-gizmo{transform:scale(.78);margin:-25px auto}.club-grid{grid-template-columns:1fr}.section-heading{align-items:flex-start;flex-direction:column}.social-banner{align-items:flex-start;flex-direction:column}.site-footer{text-align:center}.club-card p{min-height:auto}}
+
+
+/* Join Chess.com affiliate page */
+.join-hero{
+  display:grid;
+  grid-template-columns:.75fr 1.25fr;
+  align-items:center;
+  gap:34px;
+  padding:45px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 24% 35%,rgba(129,182,76,.18),transparent 34%),
+    linear-gradient(145deg,rgba(49,46,43,.98),rgba(33,31,29,.99));
+  box-shadow:var(--shadow)
+}
+.join-visual{
+  position:relative;
+  width:260px;
+  height:260px;
+  margin:auto;
+  display:grid;
+  place-items:center
+}
+.join-pawn{
+  position:relative;
+  z-index:3;
+  display:grid;
+  place-items:center;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  color:#182009;
+  background:linear-gradient(145deg,var(--green-light),var(--green));
+  border:3px solid #c5e49d;
+  box-shadow:0 0 42px rgba(129,182,76,.42);
+  font-size:84px
+}
+.join-ring{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(169,212,119,.58)
+}
+.join-ring-one{
+  width:235px;
+  height:235px;
+  animation:spin 12s linear infinite
+}
+.join-ring-two{
+  width:205px;
+  height:100px;
+  transform:rotate(25deg);
+  animation:tiltSpin 9s linear infinite reverse
+}
+.join-copy h1{
+  margin:0;
+  color:#fff;
+  font-family:Georgia,serif;
+  font-size:clamp(2.25rem,5vw,4.2rem);
+  line-height:1.02
+}
+.join-copy>p:not(.eyebrow){
+  color:var(--muted);
+  line-height:1.75;
+  font-size:17px
+}
+.join-chess-button{
+  display:inline-block;
+  margin-top:10px;
+  padding:14px 22px;
+  border:1px solid #c5e49d;
+  border-radius:12px;
+  color:#182009;
+  background:linear-gradient(180deg,var(--green-light),var(--green));
+  text-decoration:none;
+  font-weight:900;
+  box-shadow:0 12px 26px rgba(129,182,76,.2)
+}
+.join-copy small{
+  display:block;
+  max-width:620px;
+  margin-top:12px;
+  color:#908b84;
+  line-height:1.5
+}
+.join-benefits{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:15px
+}
+.join-benefits article{
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(49,46,43,.97),rgba(33,31,29,.98));
+  box-shadow:var(--shadow)
+}
+.join-benefits article>span{font-size:35px}
+.join-benefits h2{margin:13px 0 7px}
+.join-benefits p{margin:0;color:var(--muted);line-height:1.65}
+.affiliate-panel{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  align-items:center;
+  gap:25px;
+  margin-top:15px;
+  padding:28px;
+  border:1px solid rgba(129,182,76,.55);
+  border-radius:19px;
+  background:linear-gradient(145deg,rgba(43,52,34,.96),rgba(28,30,25,.98));
+  box-shadow:var(--shadow)
+}
+.affiliate-panel h2{
+  margin:0;
+  font-family:Georgia,serif;
+  font-size:clamp(1.7rem,4vw,2.75rem)
+}
+.affiliate-panel>p{margin:0;color:var(--muted);line-height:1.7}
+@media(max-width:900px){
+  .join-hero{grid-template-columns:1fr;text-align:center}
+  .join-copy small{margin-inline:auto}
+  .join-benefits{grid-template-columns:1fr}
+  .affiliate-panel{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .join-hero{padding:30px 17px}
+  .join-visual{transform:scale(.82);margin:-22px auto}
+}
+
+
+/* Official Chess.com affiliate image actions */
+.affiliate-action-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px
+}
+.affiliate-action-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height:410px;
+  padding:30px 24px;
+  text-align:center;
+  border:1px solid var(--line);
+  border-radius:20px;
+  background:
+    radial-gradient(circle at 50% 25%,rgba(129,182,76,.13),transparent 37%),
+    linear-gradient(145deg,rgba(49,46,43,.98),rgba(33,31,29,.99));
+  box-shadow:var(--shadow)
+}
+.affiliate-action-card.premium-card{
+  background:
+    radial-gradient(circle at 50% 25%,rgba(83,181,222,.14),transparent 37%),
+    linear-gradient(145deg,rgba(49,46,43,.98),rgba(33,31,29,.99))
+}
+.affiliate-action-card h2{
+  margin:3px 0 10px;
+  font-family:Georgia,serif;
+  font-size:clamp(1.7rem,3vw,2.4rem)
+}
+.affiliate-action-card>p:not(.eyebrow){
+  max-width:560px;
+  margin:0;
+  color:var(--muted);
+  line-height:1.7
+}
+.affiliate-action-card small{
+  max-width:560px;
+  margin-top:auto;
+  padding-top:16px;
+  color:#8f8a83;
+  line-height:1.5
+}
+.affiliate-image-link{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:min(100%,520px);
+  min-height:150px;
+  margin:26px 0 18px;
+  padding:18px;
+  border:1px solid rgba(169,212,119,.35);
+  border-radius:17px;
+  background:#171614;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease
+}
+.affiliate-image-link:hover,
+.affiliate-image-link:focus-visible{
+  transform:translateY(-4px) scale(1.015);
+  border-color:var(--green-light);
+  box-shadow:0 15px 34px rgba(0,0,0,.38),0 0 24px rgba(129,182,76,.18);
+  outline:none
+}
+.affiliate-image-link img{
+  display:block;
+  max-width:100%;
+  max-height:130px;
+  object-fit:contain
+}
+.premium-link{
+  border-color:rgba(83,181,222,.42)
+}
+.premium-link:hover,
+.premium-link:focus-visible{
+  border-color:#53b5de;
+  box-shadow:0 15px 34px rgba(0,0,0,.38),0 0 24px rgba(83,181,222,.22)
+}
+.chesscom-signup-link img{
+  width:min(100%,520px)
+}
+.premium-link img{
+  width:min(100%,310px)
+}
+@media(max-width:900px){
+  .affiliate-action-grid{grid-template-columns:1fr}
+}
+@media(max-width:650px){
+  .affiliate-action-card{padding:24px 16px;min-height:auto}
+  .affiliate-image-link{min-height:120px;padding:14px}
+  .affiliate-image-link img{max-height:100px}
+}
