@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#312e2b">
+  <meta name="description" content="Explore the ACFA Network, connect with our clubs and social communities, and download Club Assistant.">
+  <title>ACFA Network</title>
+  <link rel="icon" href="./assets/acfa-network-logo.jpg">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+
+  <div class="site-shell">
+    <header class="topbar">
+      <button class="brand" data-page="dashboard" aria-label="Open ACFA Network dashboard">
+        <span class="brand-mark">
+          <img src="./assets/acfa-network-logo.jpg" alt="ACFA Network logo">
+        </span>
+        <span>
+          <strong>ACFA Network</strong>
+          <small>Every Player Belongs • Every Move Matters</small>
+        </span>
+      </button>
+
+      <nav aria-label="Primary navigation">
+        <button class="nav-button active" data-page="dashboard">Network</button>
+        <button class="nav-button" data-page="social">Social</button>
+        <button class="nav-button" data-page="assistant">Club Assistant</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="page-dashboard" class="page active">
+        <div class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">AND CHESS FOR ALL</p>
+            <h1>One Network.<br>Four Distinct Communities.</h1>
+            <p>
+              The ACFA Network connects online competition, local chess, community events,
+              and year-round themed experiences under one welcoming mission.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="https://www.chess.com/club/and-chess-for-all-official" target="_blank" rel="noopener">Join the Main Club</a>
+              <button class="secondary-button" data-page="social">Connect With Us</button>
+            </div>
+          </div>
+
+          <div class="logo-gizmo" id="networkLogoStage">
+            <span class="orbit orbit-one"><i></i><i></i><i></i></span>
+            <span class="orbit orbit-two"><i></i><i></i></span>
+            <span class="orbit orbit-three"></span>
+            <img src="./assets/acfa-network-logo.jpg" alt="ACFA Network">
+            <span class="energy-ring"></span>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ACFA DASHBOARD</p>
+            <h2>Explore the Network</h2>
+          </div>
+          <p>Choose the ACFA community that fits how you want to play and connect.</p>
+        </div>
+
+        <div class="club-grid">
+          <article class="club-card featured">
+            <div class="club-label">Main Club</div>
+            <div class="club-icon">♛</div>
+            <h3>ACFA Official</h3>
+            <p>
+              The central home of the ACFA community. Join members of all levels for daily
+              matches, Vote Chess, arenas, Swiss events, Chess960, weekly challenges,
+              community projects, and live-stream activities.
+            </p>
+            <div class="tags">
+              <span>All Skill Levels</span><span>Community Hub</span><span>Events</span>
+            </div>
+            <a class="card-button" href="https://www.chess.com/club/and-chess-for-all-official" target="_blank" rel="noopener">Join ACFA Official</a>
+          </article>
+
+          <article class="club-card">
+            <div class="club-label">Online League Club</div>
+            <div class="club-icon">🏆</div>
+            <h3>ACFA League</h3>
+            <p>
+              A dedicated online league club built for organized club competition,
+              seasonal matches, team rivalries, standings, and shared competitive
+              experiences. Membership is open to everyone.
+            </p>
+            <div class="tags">
+              <span>League Play</span><span>Team Matches</span><span>Open Join</span>
+            </div>
+            <a class="card-button" href="https://www.chess.com/club/acfa-league" target="_blank" rel="noopener">Join ACFA League</a>
+          </article>
+
+          <article class="club-card">
+            <div class="club-label">San Antonio Hybrid Club</div>
+            <div class="club-icon">⭐</div>
+            <h3>ACFA San Antonio TX</h3>
+            <p>
+              ACFA's local San Antonio community for players who want both over-the-board
+              and online opportunities. Built to connect current and former San Antonio
+              residents through chess.
+            </p>
+            <div class="tags">
+              <span>Local Chess</span><span>OTB + Online</span><span>San Antonio</span>
+            </div>
+            <a class="card-button" href="https://www.chess.com/club/acfa-san-antonio-tx" target="_blank" rel="noopener">Join ACFA San Antonio TX</a>
+          </article>
+
+          <article class="club-card haunted">
+            <div class="club-label">Classic Halloween — Year Round</div>
+            <div class="club-icon">🎃</div>
+            <h3>The Haunted Rook</h3>
+            <p>
+              A year-round classic Halloween chess club inspired by the atmosphere of
+              1980s and 1990s Halloween. Enter the castle for themed community features,
+              spooky events, and a unique chess-club experience.
+            </p>
+            <div class="tags">
+              <span>Halloween</span><span>Year Round</span><span>Themed Community</span>
+            </div>
+            <a class="card-button" href="https://www.chess.com/club/the-haunted-rook" target="_blank" rel="noopener">Enter The Haunted Rook</a>
+          </article>
+        </div>
+
+        <section class="mission-panel">
+          <div>
+            <p class="eyebrow">OUR MISSION</p>
+            <h2>Chess communities built around belonging.</h2>
+          </div>
+          <p>
+            ACFA exists to create welcoming, active, and imaginative spaces where players
+            can compete, connect, contribute, and enjoy chess in the way that suits them.
+          </p>
+        </section>
+      </section>
+
+      <section id="page-social" class="page">
+        <div class="page-intro">
+          <p class="eyebrow">ACFA SOCIAL NETWORK</p>
+          <h1>Stay Connected Beyond the Board</h1>
+          <p>Join the conversation, watch live chess, and connect with the wider ACFA community.</p>
+        </div>
+
+        <div class="social-grid">
+          <article class="social-card discord">
+            <div class="social-icon">◉</div>
+            <h2>Discord</h2>
+            <p>
+              The real-time communication hub for ACFA Official, ACFA League, and ACFA San Antonio.
+              Meet members, follow events, and stay involved between games.
+            </p>
+            <a href="https://discord.gg/Atk2GKfgU" target="_blank" rel="noopener">Join the ACFA Discord</a>
+          </article>
+
+          <article class="social-card twitch">
+            <div class="social-icon">▣</div>
+            <h2>Twitch</h2>
+            <p>
+              Watch DevilsGambit22 play chess live with ACFA and other chess-club members,
+              plus selected club events and community matches.
+            </p>
+            <a href="https://www.twitch.tv/dasoulking98" target="_blank" rel="noopener">Watch ACFA Live</a>
+          </article>
+
+          <article class="social-card facebook">
+            <div class="social-icon">f</div>
+            <h2>Facebook</h2>
+            <p>
+              Follow the ACFA Facebook community for updates, conversations, shared content,
+              and another way to keep in touch with the network.
+            </p>
+            <a href="https://www.facebook.com/share/g/18has9LYsZ/?mibextid=wwXIfr" target="_blank" rel="noopener">Visit ACFA on Facebook</a>
+          </article>
+        </div>
+
+        <section class="social-banner">
+          <img src="./assets/acfa-network-logo.jpg" alt="">
+          <div>
+            <p class="eyebrow">THE ACFA COMMUNITY</p>
+            <h2>Play together. Build together. Belong together.</h2>
+          </div>
+        </section>
+      </section>
+
+      <section id="page-assistant" class="page">
+        <div class="assistant-hero">
+          <div class="assistant-logo-stage">
+            <span class="assistant-orbit"></span>
+            <img src="./assets/club-assistant-logo.png" alt="Club Assistant logo">
+          </div>
+          <div>
+            <p class="eyebrow">PUBLIC BETA</p>
+            <h1>Club Assistant</h1>
+            <p class="assistant-lead">
+              A Chess.com-inspired operations companion designed to help club owners organize
+              members, prospects, clubs, messages, templates, and daily workflows.
+            </p>
+            <div class="version-chip">Version 1.1.0 Public Beta</div>
+          </div>
+        </div>
+
+        <div class="download-layout">
+          <article class="download-card">
+            <p class="eyebrow">DOWNLOAD</p>
+            <h2>Get Club Assistant</h2>
+            <p>
+              Club Assistant is currently distributed as a free public beta. Chrome requires
+              manually distributed extensions to be installed through Developer Mode.
+            </p>
+            <a class="download-button" href="./downloads/Club-Assistant-v1.1.0-Public-Beta.zip" download>
+              Download Club Assistant
+            </a>
+            <small>ZIP file • Chrome extension • Public beta</small>
+          </article>
+
+          <article class="install-card">
+            <p class="eyebrow">INSTALLATION</p>
+            <h2>How to Install</h2>
+            <ol>
+              <li>Download and extract the ZIP file.</li>
+              <li>Open <code>chrome://extensions</code> in Google Chrome.</li>
+              <li>Turn on <strong>Developer mode</strong>.</li>
+              <li>Select <strong>Load unpacked</strong>.</li>
+              <li>Choose the extracted Club Assistant folder.</li>
+            </ol>
+          </article>
+        </div>
+
+        <section class="beta-notice">
+          <div>
+            <p class="eyebrow">BETA NOTICE</p>
+            <h2>Built for club owners. Improved through real use.</h2>
+          </div>
+          <p>
+            This release is intended for early club-owner testing. Features may be refined
+            as feedback is received, while the extension remains focused on club management
+            rather than gameplay or move assistance.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <button class="footer-signature" id="footerLogo" aria-label="ACFA copyright signature">
+        <img src="./assets/lady-justice-footer.jpg" alt="Lady Justice ACFA logo">
+      </button>
+      <div>
+        <strong>ACFA Network</strong>
+        <span>© 2026 DevilsGambit22 • All Rights Reserved</span>
+      </div>
+    </footer>
+  </div>
+
+  <div class="easter-overlay" id="easterOverlay" aria-hidden="true">
+    <div class="easter-card">
+      <div class="easter-gizmo">
+        <span></span><span></span>
+        <img src="./assets/lady-justice-footer.jpg" alt="">
+      </div>
+      <p class="eyebrow">AND CHESS FOR ALL</p>
+      <h2>Every Player Belongs</h2>
+      <strong>Every Move Matters</strong>
+      <p>Created by DevilsGambit22</p>
+    </div>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
