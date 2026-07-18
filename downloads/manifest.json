@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "minimum_chrome_version": "116",
+  "name": "Club Assistant \u2014 Club Owner Edition",
+  "version": "1.2.5",
+  "description": "A customizable Chess.com club operations companion for club owners, with roster synchronization, contextual tools, message templates, member and prospect management, backups, and activity logging.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "https://www.chess.com/*",
+    "https://api.chess.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Club Assistant",
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "modules/sidepanel/sidebar.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.chess.com/*"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "short_name": "Club Assistant",
+  "version_name": "1.2.4 Public Beta",
+  "icons": {
+    "16": "assets/icons/icon-16.png",
+    "32": "assets/icons/icon-32.png",
+    "48": "assets/icons/icon-48.png",
+    "128": "assets/icons/icon-128.png"
+  }
+}
